@@ -38,7 +38,7 @@ const ContextProvider = createContext();
 export const useActiveTab = () => useContext(ContextProvider);
 
 export const Context = ({ children }) => {
-    const [activeTab, setActiveTab] = useState(1);
+    const [activeTab, setActiveTab] = useState(null);
 
     return (
         <ContextProvider.Provider value={{ activeTab, setActiveTab }}>
@@ -46,3 +46,4 @@ export const Context = ({ children }) => {
         </ContextProvider.Provider>
     )
 }
+

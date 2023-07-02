@@ -9,13 +9,14 @@ import { faCircleNotch } from "@fortawesome/free-solid-svg-icons";
 
 const ContentBox = () => {
     const { width } = useWindowDimensions();
-    const { activeTab } = useActiveTab();
+    const { activeTab, setActiveTab } = useActiveTab();
     const [actualWidth, setActualWidth] = useState(null);
     const [actualActiveTab, setActualActiveTab] = useState(null);
     const breakpoint = 640;
 
     useEffect(() => {
         setActualWidth(width);
+        if (!activeTab) setActiveTab(1)
         setActualActiveTab(activeTab);
     }, [width, activeTab])
 
