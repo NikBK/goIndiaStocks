@@ -17,6 +17,9 @@ module.exports = {
       },
       height: {
         "over-screen": "120vh",
+      },
+      animation: {
+        'spin-slow': 'spin 2s linear infinite',
       }
     },
   },

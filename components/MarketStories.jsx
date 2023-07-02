@@ -3,8 +3,7 @@ import Image from "next/image";
 
 const MarketStories = () => {
     return (
-        <div className="flex flex-col h-over-screen overflow-x-scroll bg-slate-50 market_bar">
-            <h2 className="text-orange-600 font-semibold text-xl pl-5">MARKET STORIES</h2>
+        <div className="flex flex-col sm:h-over-screen sm:overflow-x-scroll bg-slate-50 hidden_scroll_bar">
             <div className="flex flex-wrap justify-evenly">
                 {marketStoriesList.map((story, index) => (
                     <Story story={story} key={`${story.name}_${index}`} />

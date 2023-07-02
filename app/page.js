@@ -1,14 +1,19 @@
-import DiscussionForum from "@/components/DiscussionForum";
-import MarketStories from "@/components/MarketStories";
+import ContentBox from "@/components/ContentBox";
+import Heading from "@/components/Heading";
 import SideBarMenu from "@/components/SideBarMenu";
+import { Context } from "@/utils/functions/customHooks";
 
 export default function Home() {
 
   return (
-    <main className="flex">
-      <SideBarMenu />
-      <DiscussionForum />
-      <MarketStories />
-    </main>
+    <Context>
+      <main className="overflow-x-hidden">
+        <Heading />
+        <div className="flex">
+          <SideBarMenu />
+          <ContentBox />
+        </div>
+      </main>
+    </Context>
   )
 }

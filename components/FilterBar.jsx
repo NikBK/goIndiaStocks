@@ -10,7 +10,7 @@ const filters = [
 const FilterBar = () => {
     return (
         <ul className="flex justify-between items-center py-2.5 px-1.5 mb-2 bg-white shadow-margin-down rounded-md">
-            <div className="flex overflow-x-scroll filters_bar">
+            <div className="flex overflow-x-scroll hidden_scroll_bar">
                 {filters.map((filter, index) => (
                     <li className={`${filter.bgColor} flex items-center h-fit min-w-fit rounded-full py-1.5 px-3 mx-1.5 text-sm text-slate-100 cursor-pointer`} key={`${filter.name}_${index}`}>
                         {filter.name}
