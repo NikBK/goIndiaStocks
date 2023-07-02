@@ -1,4 +1,6 @@
 import { marketStoriesList } from "@/utils/store/marketStoriesList";
+import { faPlus } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 
 const MarketStories = () => {
@@ -8,6 +10,9 @@ const MarketStories = () => {
                 {marketStoriesList.map((story, index) => (
                     <Story story={story} key={`${story.name}_${index}`} />
                 ))}
+            </div>
+            <div className="fixed bottom-4 right-4 w-9 h-9 bg-[#1d3b61] rounded-[50%] p-2.5 box-content cursor-pointer">
+                <FontAwesomeIcon icon={faPlus} className="w-6 h-6 mx-auto flex rounded-[50%] text-white h-full w-full" />
             </div>
         </div>
     )
