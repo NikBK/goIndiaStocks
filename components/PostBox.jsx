@@ -16,7 +16,8 @@ const PostBox = () => {
 
 const Post = ({ post }) => {
     return (
-        <div className="bg-white shadow-lg m-2">
+        <div className="relative bg-white shadow-lg m-2">
+            <div className="absolute top-0 right-0 text-blue-500 text-sm p-2.5">{post.postedTime} min ago</div>
             {post.companyLogo &&
                 <Image src={post.companyLogo} alt="Company Poster" width={300} height={200} className="mx-auto" />
             }
