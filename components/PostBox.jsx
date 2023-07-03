@@ -21,7 +21,7 @@ const Post = ({ post }) => {
             {post.companyLogo &&
                 <Image src={post.companyLogo} alt="Company Poster" width={300} height={200} className="mx-auto" />
             }
-            <section className="">
+            <section>
                 <div className="flex flex-col">
                     <div className="flex items-center">
                         {post.userProfile
@@ -34,7 +34,7 @@ const Post = ({ post }) => {
                     <div className="px-10 py-2.5 my-2.5">{post.content}</div>
                 </div>
             </section>
-            <section className="flex justify-around px-2.5 py-1.5">
+            <section className="flex justify-around flex-wrap px-2.5 py-1.5">
                 <PostFeatures type={post.likes} icon={faHeart} />
                 <PostFeatures type={post.views} icon={faEye} />
                 <PostFeatures type={`${post.comments.length} comments`} icon={faComment} />
