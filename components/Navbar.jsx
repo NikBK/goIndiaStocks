@@ -3,21 +3,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 
 const Navbar = () => {
-    // const [windowDimensions, setWindowDimensions] = useState(
-    //     getWindowDimensions()
-    // )
-
-    // useEffect(() => {
-    //     if (typeof window !== "undefined") {
-    //         function handleResize() {
-    //             setWindowDimensions(getWindowDimensions())
-    //         }
-
-    //         window.addEventListener("resize", handleResize)
-    //         return () => window.removeEventListener("resize", handleResize)
-    //     }
-    // }, [])
-
 
     return (
         <nav className="flex w-full justify-around h-16 bg-white fixed top-0 left-0 z-10">
@@ -45,12 +30,6 @@ const Navbar = () => {
             </div>
             <div className="sm:hidden flex justify-center items-center w-8 h-8 rounded-full items-center my-auto mx-0">
                 <FontAwesomeIcon icon={faUser} className="inline-block w-4 h-6 hover:cursor-pointer" />
-                {/* <Image
-                    alt="profile"
-                    src="/assets/images/hero.jpeg"
-                    width={20}
-                    height={10}
-                /> */}
             </div>
         </nav>
     )
